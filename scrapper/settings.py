@@ -8,6 +8,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import scrapper
 
 BOT_NAME = 'scrapper'
 
@@ -55,15 +56,24 @@ DOWNLOAD_DELAY = 2
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-# }
+SPIDERMON_ENABLED = True
+
+EXTENSIONS = {
+    'spidermon.contrib.scrapy.extensions.Spidermon': 500,
+}
+
+SPIDERMON_VALIDATION_MODELS = (
+    'scrapper.validators.ItemValidator',
+)
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+    'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 800,
     'scrapper.pipelines.SendData': 999,
 }
+
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

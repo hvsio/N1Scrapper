@@ -17,10 +17,10 @@ class WebsiteBankSpider(scrapy.Spider):
         self.data = json.loads(resp.text.strip("[]"))
 
     def start_requests(self):
-        #start_urls = self.data['url']
+        #start_urls = self.data['pageurl']
         start_urls = banks_data.jyske_url
-
-        yield scrapy.Request(url=start_urls, callback=self.parse)
+        for url in start_urls:
+            yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
         #xpaths = banks_data.nordea_xpaths

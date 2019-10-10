@@ -3,8 +3,9 @@ from scrapy.utils.project import get_project_settings
 from twisted.internet import reactor
 from twisted.internet.task import deferLater
 from scrapper.spiders.website_spider import WebsiteBankSpider
+import requests
 
-TIMEOUT_seconds = 30
+#TIMEOUT_seconds = 30
 
 # Please find the documentation here: http://crawl.blog/scrapy-loop/
 
@@ -25,6 +26,8 @@ def crash(failure):
 
 def _crawl(result, spider):
     # maybe we can get timeout here from http request ?
+    resp = requests.get('http://127.0.0.1:8070/timeout')
+    TIMEOUT_seconds = int(resp.text)
 
     deferred = process.crawl(spider)
     deferred.addCallback(lambda results: print(f'waiting {TIMEOUT_seconds} seconds before restart...'))

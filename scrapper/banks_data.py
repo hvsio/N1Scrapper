@@ -16,7 +16,7 @@ fynske_xpaths = [" ",
 
 jyske_url = "https://www.jyskebank.dk/produkter/priser/valutamarginaler"
 jyske_xpaths = [" ",
-                "/html/body/div[1]/div[4]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[1]/text()",
+                '//*[@id="Valutamarginaler"]/tbody/tr/td/font/font/text()',
                 "/html/body/div[1]/div[4]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[2]/div/div/text()",
                 "/html/body/div[1]/div[4]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[2]/div/div/text()"
                 ]

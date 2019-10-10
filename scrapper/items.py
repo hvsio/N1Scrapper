@@ -47,16 +47,16 @@ class ParseDotIntoComa:
 
 
 class OutputTable(scrapy.Item):
-    from_currency = scrapy.Field(
-        output_processor=MapCompose(StripText(), ParseCurrencyNameToISO())
+    fromCurrency = scrapy.Field(
+        output_processor=MapCompose(StripText())
     )
-    to_currency = scrapy.Field(
-        output_processor=MapCompose(StripText(), ParseCurrencyNameToISO())
+    toCurrency = scrapy.Field(
+        output_processor=MapCompose(StripText())
     )
-    buy_margin = scrapy.Field(
+    buyMargin = scrapy.Field(
         output_processor=MapCompose(StripText(), ParseDotIntoComa())
     )
-    sell_margin = scrapy.Field(
+    sellMargin = scrapy.Field(
         output_processor=MapCompose(StripText(), ParseDotIntoComa())
     )
 

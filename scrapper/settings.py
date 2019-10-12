@@ -55,7 +55,6 @@ DOWNLOAD_DELAY = 2
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
-SPIDERMON_ENABLED = True
 
 EXTENSIONS = {
     'spidermon.contrib.scrapy.extensions.Spidermon': 500,
@@ -65,9 +64,16 @@ SPIDERMON_VALIDATION_MODELS = (
     'scrapper.validators.ItemValidator',
 )
 
+SPIDERMON_SPIDER_CLOSE_MONITORS = (
+    'scrapper.monitors.SpiderCloseMonitorSuite',
+)
+
+SPIDERMON_ENABLED = True
+
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+    'scrapper.pipelines.DeleteEmptyFields': 700,
     'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 800,
     'scrapper.pipelines.SendData': 999,
 }

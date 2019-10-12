@@ -1,5 +1,6 @@
 import scrapy
 import requests
+from datetime import datetime
 from scrapper.items import OutputTable, ProductItemLoader
 
 
@@ -19,11 +20,16 @@ class WebsiteBankSpider(scrapy.Spider):
             yield scrapy.Request(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index])
 
     def parse(self, response):
-        meta = response.meta
         loader = ProductItemLoader(item=OutputTable(), response=response)
+        timestamp = datetime.now()
+        meta = response.meta
 
+        loader.add_value('name', meta['name'])
+        loader.add_value('country', meta['country'])
+        loader.add_value('time', timestamp.strftime("%d-%b-%Y (%H:%M:%S.%f)"))
+        # loader.add_value('unit', meta['unit'])
         loader.add_xpath('toCurrency', meta['toCurrencyXpath'])
-        loader.add_value('fromCurrency', ["DKK"] * len(meta['toCurrencyXpath']))
+        loader.add_value('fromCurrency', meta['fromCurrency'])
         loader.add_xpath('buyMargin', meta['buyXpath'])
         loader.add_xpath('sellMargin', meta['sellXpath'])
 

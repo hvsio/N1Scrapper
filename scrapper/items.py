@@ -15,7 +15,7 @@ class ProductItemLoader(ItemLoader):
 
 
 class StripText:
-    def __init__(self, chars=' \t\n'):
+    def __init__(self, chars='% +-\t\n'):
         self.chars = chars
 
     def __call__(self, value):  # This makes an instance callable
@@ -28,7 +28,7 @@ class StripText:
 class ParseCurrencyNameToISO:
     def __call__(self, value):  # This makes an instance callable
         try:
-            for key in banks_data.currency_list.keys():
+            for key in banks_data.currency_name_iso.keys():
                 if key in value:
                     value = key
             return value
@@ -36,17 +36,22 @@ class ParseCurrencyNameToISO:
             return value
 
 
-class ParseDotIntoComa:
+class ParseComaIntoDot:
     def __call__(self, value):  # This makes an instance callable
         try:
-            if "." in value:
-                value.replace(".", ",")
+            if "," in value:
+                value = value.replace(",", ".")
             return value
         except:
             return value
 
 
 class OutputTable(scrapy.Item):
+    name = scrapy.Field()
+    country = scrapy.Field()
+    time = scrapy.Field()
+    # unit = scrapy.Field()
+
     fromCurrency = scrapy.Field(
         output_processor=MapCompose(StripText())
     )
@@ -54,9 +59,8 @@ class OutputTable(scrapy.Item):
         output_processor=MapCompose(StripText())
     )
     buyMargin = scrapy.Field(
-        output_processor=MapCompose(StripText(), ParseDotIntoComa())
+        output_processor=MapCompose(StripText(), ParseComaIntoDot())
     )
     sellMargin = scrapy.Field(
-        output_processor=MapCompose(StripText(), ParseDotIntoComa())
+        output_processor=MapCompose(StripText(), ParseComaIntoDot())
     )
-

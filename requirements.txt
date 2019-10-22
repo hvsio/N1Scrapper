@@ -1,3 +1,5 @@
+schematics
+iso4217
 twisted
 django-scheduler
 flask

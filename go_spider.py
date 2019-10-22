@@ -5,8 +5,16 @@ from twisted.internet.task import deferLater
 from scrapper.spiders.website_spider import WebsiteBankSpider
 import requests
 
-#TIMEOUT_seconds = 30
+# Running a crawler once (comment everything below line 14):
 
+# process = CrawlerProcess(get_project_settings())
+# process.crawl(WebsiteBankSpider)
+# process.start()
+
+# -----------
+
+# Running crawler in a loop in an intervals gotten from 'test_service_output_request.py'
+# Comment lines [10,12]
 # Please find the documentation here: http://crawl.blog/scrapy-loop/
 
 

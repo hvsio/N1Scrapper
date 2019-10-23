@@ -7,6 +7,7 @@ nordea_xpaths = [" ",
                  "/html/body/main/section[1]/div/article/table/tbody/tr/td[5]/text()"
                  ]
 
+
 fynske_url = "https://www.fynskebank.dk/om-os/priser-og-vilkar/valutamarginaler/"
 fynske_xpaths = [" ",
                  "/html/body/div[1]/div[1]/div/div/div/section/div/div[1]/table[1]/tbody/tr/td[1]/text()",

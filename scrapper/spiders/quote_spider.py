@@ -30,7 +30,7 @@ class WebsiteBankSpider(scrapy.Spider):
         loader.add_value('name', meta['name'])
         loader.add_value('country', meta['country'])
         loader.add_value('time', timestamp.strftime("%d-%b-%Y (%H:%M:%S.%f)"))
-        # loader.add_value('unit', meta['unit'])
+        loader.add_value('unit', meta['unit'])
         loader.add_xpath('toCurrency', meta['toCurrencyXpath'])
         loader.add_value('fromCurrency', meta['fromCurrency'])
         loader.add_xpath('buyMargin', meta['buyxpath'])

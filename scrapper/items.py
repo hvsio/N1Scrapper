@@ -50,7 +50,7 @@ class OutputTable(scrapy.Item):
     name = scrapy.Field()
     country = scrapy.Field()
     time = scrapy.Field()
-    # unit = scrapy.Field()
+    unit = scrapy.Field()
     fromCurrency = scrapy.Field(
         output_processor=MapCompose(StripText())
     )

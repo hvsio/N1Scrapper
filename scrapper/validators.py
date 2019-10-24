@@ -35,3 +35,4 @@ class ItemValidator(Model):
     toCurrency = ListType(StringType(validators=[is_valid_currency_iso]))
     buyMargin = ListType(StringType)
     sellMargin = ListType(StringType)
+    unit = StringType()

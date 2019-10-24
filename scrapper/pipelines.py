@@ -6,6 +6,7 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 import json
 import requests
+import urllib.request
 
 
 class DeleteEmptyFields(object):
@@ -39,6 +40,6 @@ class SendData(object):
     def process_item(self, item, spider):  # this method is prepared for sending data to "margin saver"
         print("------------------ PROCESS_ITEM -------- SEND DATA - CLASS")
         data = json.dumps(dict(item))
-        response = requests.post(self.url, data)
-        print(response.json())
+        headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+        requests.post(self.url, data=data, headers=headers)
         return item

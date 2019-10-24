@@ -33,7 +33,7 @@ class WebsiteBankSpider(scrapy.Spider):
         # loader.add_value('unit', meta['unit'])
         loader.add_xpath('toCurrency', meta['toCurrencyXpath'])
         loader.add_value('fromCurrency', meta['fromCurrency'])
-        loader.add_xpath('buyMargin', meta['buyXpath'])
-        loader.add_xpath('sellMargin', meta['sellXpath'])
+        loader.add_xpath('buyMargin', meta['buyxpath'])
+        loader.add_xpath('sellMargin', meta['sellxpath'])
 
         return loader.load_item()

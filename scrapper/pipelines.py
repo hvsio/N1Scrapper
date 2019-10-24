@@ -34,11 +34,11 @@ class DeleteEmptyFields(object):
 
 
 class SendData(object):
-    url = 'http://localhost:8070/upload'
+    url = 'http://localhost:5000/margin'
 
     def process_item(self, item, spider):  # this method is prepared for sending data to "margin saver"
         print("------------------ PROCESS_ITEM -------- SEND DATA - CLASS")
         data = json.dumps(dict(item))
-        response = requests.put(self.url, data=data)
+        response = requests.post(self.url, data)
         print(response.json())
         return item

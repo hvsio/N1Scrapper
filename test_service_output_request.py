@@ -17,7 +17,7 @@ def on_get():
     try:
         return str(timeout), 200
     except:
-        return jsonify({"status": "Getting timeout error"}), 408
+        return jsonify({"status": "GettingF timeout error"}), 408
 
 
 if __name__ == '__main__':

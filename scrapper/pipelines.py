@@ -4,30 +4,36 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+import configparser
 import json
 import requests
-import urllib.request
+from environment import environment
 
 
 class DeleteEmptyFields(object):
     def process_item(self, item, spider):
-        temp = []
+
+        print(f'---------{item["name"]}------------')
+        print(item)
+        print('---------------------')
+
+        temp_toCurrency = []
         for index in range(len(item['toCurrency'])):
             if not item['toCurrency'][index] == '':
-                temp.append(item['toCurrency'][index])
-        item['toCurrency'] = temp
+                temp_toCurrency.append(item['toCurrency'][index])
+        item['toCurrency'] = temp_toCurrency
 
-        temp = []
+        temp_buyMargin = []
         for index in range(len(item['buyMargin'])):
             if not item['buyMargin'][index] == '':
-                temp.append(item['buyMargin'][index])
-        item['buyMargin'] = temp
+                temp_buyMargin.append(item['buyMargin'][index])
+        item['buyMargin'] = temp_buyMargin
 
-        temp = []
+        temp_sellMargin = []
         for index in range(len(item['sellMargin'])):
             if not item['sellMargin'][index] == '':
-                temp.append(item['sellMargin'][index])
-        item['sellMargin'] = temp
+                temp_sellMargin.append(item['sellMargin'][index])
+        item['sellMargin'] = temp_sellMargin
 
         item['fromCurrency'] = item['fromCurrency'] * len(item['toCurrency'])
 
@@ -35,11 +41,15 @@ class DeleteEmptyFields(object):
 
 
 class SendData(object):
-    url = 'http://localhost:5000/margin'
-
     def process_item(self, item, spider):  # this method is prepared for sending data to "margin saver"
-        print("------------------ PROCESS_ITEM -------- SEND DATA - CLASS")
+
+        # print(f'---------{item["name"]}------------')
+        # print(item)
+        # print('---------------------')
+
+        url = environment.margin_saver_service_url() + "/margin"
+
         data = json.dumps(dict(item))
         headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-        requests.post(self.url, data=data, headers=headers)
+        requests.post(url, data=data, headers=headers)
         return item

@@ -55,7 +55,7 @@ class OutputTable(scrapy.Item):
         output_processor=MapCompose(StripText())
     )
     toCurrency = scrapy.Field(
-        output_processor=MapCompose(StripText())
+        output_processor=MapCompose(StripText(), ParseCurrencyNameToISO())
     )
     buyMargin = scrapy.Field(
         output_processor=MapCompose(StripText(), ParseComaIntoDot())

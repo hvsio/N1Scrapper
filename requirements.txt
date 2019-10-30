@@ -5,4 +5,5 @@ django-scheduler
 flask
 scrapy
 requests
+pytest
 spidermon

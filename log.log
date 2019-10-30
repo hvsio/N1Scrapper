@@ -1,67 +1,71 @@
-2019-10-25 00:01:26,071 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:17:27,144 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:17:27,144 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:17:35,151 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:17:35,151 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:17:51,823 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:17:51,823 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:18:14,548 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:18:14,548 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:21:14,242 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:21:14,242 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:22:30,386 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:22:30,386 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:23:18,189 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:23:18,189 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:26:08,044 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:26:08,044 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:27:16,598 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:27:16,598 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:32:06,562 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:32:06,562 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:32:16,676 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:32:16,676 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:34:25,312 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:34:25,312 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:41:33,512 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:41:33,512 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:48:07,113 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:48:07,113 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:49:27,849 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:49:27,849 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:50:44,983 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:50:44,983 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:51:01,557 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:51:01,557 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:51:25,199 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:51:25,199 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:52:34,996 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:52:34,996 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:53:28,992 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:53:28,992 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:56:35,589 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:56:35,589 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:57:40,298 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 00:57:40,298 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:04:35,505 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:04:35,505 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:04:56,524 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:04:56,524 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:12:33,324 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:12:33,324 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:12:55,559 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:12:55,559 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:19:43,396 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:19:43,396 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:26:38,443 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:26:38,443 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:30:20,386 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:30:20,386 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:38:48,599 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:38:48,599 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:42:27,862 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:42:27,862 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:45:59,460 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:45:59,460 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:48:33,560 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
-2019-10-25 01:48:33,560 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code CNH
+2019-10-30 09:54:36,413 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 09:59:20,453 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 09:59:20,453 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:21:34,419 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:21:34,419 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:23:40,766 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:23:40,766 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:29:00,866 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:29:00,866 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:32:21,686 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:32:21,686 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:32:48,375 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:32:48,375 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:36:15,227 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:36:15,227 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:40:50,579 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:40:50,579 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:53:31,802 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 12:53:31,802 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:01:43,817 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:01:43,817 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:10:39,568 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:10:39,568 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:15:39,807 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:15:39,807 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: EUR - Euro
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: EUR - Euro
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: USD - US Dollar
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: USD - US Dollar
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: GBP - Engelske Pund
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: GBP - Engelske Pund
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: SEK - Svenske Kroner
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: SEK - Svenske Kroner
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: NOK - Norske Kroner
+2019-10-30 13:15:40,286 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: NOK - Norske Kroner
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CHF - Schweiziske Franc
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CHF - Schweiziske Franc
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CAD - Canadiske Dollar
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CAD - Canadiske Dollar
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: JPY - Japanske Yen
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: JPY - Japanske Yen
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: AUD - Australske Dollar
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: AUD - Australske Dollar
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: NZD - New Zealandske Dollar
+2019-10-30 13:15:40,287 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: NZD - New Zealandske Dollar
+2019-10-30 13:15:40,288 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: PLN - Polske Zloty
+2019-10-30 13:15:40,288 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: PLN - Polske Zloty
+2019-10-30 13:15:40,288 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CZK - Tjekkisk Koruna
+2019-10-30 13:15:40,288 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CZK - Tjekkisk Koruna
+2019-10-30 13:15:40,288 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: HUF - Ungarske Forinth
+2019-10-30 13:15:40,288 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: HUF - Ungarske Forinth
+2019-10-30 13:15:40,289 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: HKD - Hong Kong Dollar
+2019-10-30 13:15:40,289 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: HKD - Hong Kong Dollar
+2019-10-30 13:15:40,289 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: SGD - Singapore Dollar
+2019-10-30 13:15:40,289 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: SGD - Singapore Dollar
+2019-10-30 13:15:40,289 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: ZAR - Sydafrikanske Rand
+2019-10-30 13:15:40,289 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: ZAR - Sydafrikanske Rand
+2019-10-30 13:22:00,712 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:22:00,712 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:24:06,276 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:24:06,276 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:31:32,851 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:31:32,851 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:32:37,784 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:32:37,784 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:35:47,763 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:35:47,763 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:37:57,997 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:37:57,997 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:41:21,530 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH
+2019-10-30 13:41:21,530 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: CNH

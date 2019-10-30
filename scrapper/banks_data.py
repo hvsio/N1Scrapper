@@ -18,8 +18,11 @@ fynske_xpaths = [" ",
 jyske_url = "https://www.jyskebank.dk/produkter/priser/valutamarginaler"
 jyske_xpaths = [" ",
                 '//*[@id="Valutamarginaler"]/tbody/tr/td/font/font/text()',
-                "/html/body/div[1]/div[4]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[2]/div/div/text()",
-                "/html/body/div[1]/div[4]/div/div[2]/div[1]/div[2]/table/tbody/tr/td[2]/div/div/text()"
+                '/html/body/div/div/div/div/div/div/table/tbody/tr/td[1]/font',
+                '//*[@id="Valutamarginaler"]/tbody/tr/td[2]/div/div/font/font/text()',
+                '/html/body/div/div/div/div/div/div/table/tbody/tr/td[2]/div/div/font/font',
+
+                '//*[@id="Valutamarginaler"]/tbody/tr/td[2]/div/div/font/font/text()'
                 ]
 
 nykredit_url = "https://www.nykredit.dk/dit-liv/priser-og-vilkar/valutakurser/valutakurser---noteringskurser/"

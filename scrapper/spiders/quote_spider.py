@@ -3,6 +3,7 @@ import requests
 from datetime import datetime
 import logger
 from scrapper.items import OutputTable, ProductItemLoader
+from environment import environment
 
 
 class WebsiteBankSpider(scrapy.Spider):
@@ -12,9 +13,17 @@ class WebsiteBankSpider(scrapy.Spider):
         super(WebsiteBankSpider, self).__init__(**kwargs)
         self.my_logger = logger.get_logger('my_log')
 
+        url = environment.scrapper_service_url() + "/banks"
+
         # download the jsons from the http request
-        resp = requests.get('http://127.0.0.1:8000/banks')
+        resp = requests.get(url)
         self.data = resp.json()
+
+        print(self.data)
+        for index in range(len(self.data)):
+            self.data[index]['toCurrencyXpath'] = self.data[index]['toCurrencyXpath'] + '/text()'
+            self.data[index]['buyxpath'] = self.data[index]['buyxpath'] + '/text()'
+            self.data[index]['sellxpath'] = self.data[index]['sellxpath'] + '/text()'
 
     def start_requests(self):
         for index in range(len(self.data)):
@@ -22,7 +31,6 @@ class WebsiteBankSpider(scrapy.Spider):
             yield scrapy.Request(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index])
 
     def parse(self, response):
-
         loader = ProductItemLoader(item=OutputTable(), response=response)
         timestamp = datetime.now()
         meta = response.meta

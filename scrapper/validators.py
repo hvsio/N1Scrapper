@@ -25,15 +25,15 @@ def is_valid_country_iso(value):
 
 
 def is_valid_currency_iso(value):
-    # if not currency_name_iso.__contains__(value):
-    #     raise ValidationError(f'Invalid currency ISO code {value}')
-    # return value
-    try:
-        Currency(value)
-    except:
-        my_logger.error(f'Invalid currency ISO code: {value}')
-        raise ValidationError(f'Invalid currency ISO code: {value}')
+    if not currency_name_iso.__contains__(value):
+        raise ValidationError(f'Invalid currency ISO code {value}')
     return value
+    # try:
+    #     Currency(value)
+    # except:
+    #     my_logger.error(f'Invalid currency ISO code: {value}')
+    #     raise ValidationError(f'Invalid currency ISO code: {value}')
+    # return value
 
 
 class ItemValidator(Model):

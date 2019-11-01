@@ -15,10 +15,10 @@ SPIDER_MODULES = ['scrapper.spiders']
 NEWSPIDER_MODULE = 'scrapper.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'scrapper (+http://www.yourdomain.com)'
+USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
@@ -77,7 +77,6 @@ ITEM_PIPELINES = {
     'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 800,
     'scrapper.pipelines.SendData': 999,
 }
-
 
 
 # Enable and configure the AutoThrottle extension (disabled by default)

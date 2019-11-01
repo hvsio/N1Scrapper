@@ -19,7 +19,6 @@ class WebsiteBankSpider(scrapy.Spider):
         resp = requests.get(url)
         self.data = resp.json()
 
-        print(self.data)
         for index in range(len(self.data)):
             self.data[index]['toCurrencyXpath'] = self.data[index]['toCurrencyXpath'] + '/text()'
             self.data[index]['buyxpath'] = self.data[index]['buyxpath'] + '/text()'
@@ -43,5 +42,20 @@ class WebsiteBankSpider(scrapy.Spider):
         loader.add_value('fromCurrency', meta['fromCurrency'])
         loader.add_xpath('buyMargin', meta['buyxpath'])
         loader.add_xpath('sellMargin', meta['sellxpath'])
+
+        # toCur = response.xpath(meta['toCurrencyXpath']).getall()
+        # buy = response.xpath(meta['buyxpath']).getall()
+        # sell = response.xpath(meta['sellxpath']).getall()
+
+        # if meta['name'] == 'HYPO NOE' or meta['name'] == 'Deniz Bank' or meta['name'] == 'Volksbank':
+        #
+        #     with open(f'{meta["name"]}.html', 'wb') as F:
+        #         F.write(response.body)
+        #
+        #     print(meta['name'])
+        #     print(response.text)
+        #     print(toCur)
+        #     print(buy)
+        #     print(sell)
 
         return loader.load_item()

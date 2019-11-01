@@ -13,13 +13,15 @@ from environment import environment
 class DeleteEmptyFields(object):
     def process_item(self, item, spider):
 
-        print(f'---------{item["name"]}------------')
-        print(item)
-        print('---------------------')
+        # print(f'---------{item["name"]}------------')
+        # print(item)
+        # print('---------------------')
 
+        # TODO: MAYBE INSTEAD OF '' TRY OUT WITH LENGTH < 3 ??
+        # TODO: Think of skip row or sth
         temp_toCurrency = []
         for index in range(len(item['toCurrency'])):
-            if not item['toCurrency'][index] == '':
+            if not item['toCurrency'][index] == '': # or not item['toCurrency'][index] == '-':
                 temp_toCurrency.append(item['toCurrency'][index])
         item['toCurrency'] = temp_toCurrency
 

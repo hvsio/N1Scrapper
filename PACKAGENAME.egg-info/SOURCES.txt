@@ -1,0 +1,16 @@
+setup.py
+PACKAGENAME.egg-info/PKG-INFO
+PACKAGENAME.egg-info/SOURCES.txt
+PACKAGENAME.egg-info/dependency_links.txt
+PACKAGENAME.egg-info/top_level.txt
+scrapper/__init__.py
+scrapper/banks_data.py
+scrapper/items.py
+scrapper/middlewares.py
+scrapper/monitors.py
+scrapper/pipelines.py
+scrapper/settings.py
+scrapper/validators.py
+scrapper/spiders/__init__.py
+scrapper/spiders/quote_spider.py
+test/test.py

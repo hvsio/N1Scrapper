@@ -20,7 +20,7 @@ steps:
 #Adds the container to Google container registry as an artefact
 - name: 'gcr.io/cloud-builders/docker'
   id: Container push
-  args: ['push', 'gcr.io/abiding-robot-255320/N1_scrapper:$SHORT_SHA']
+  args: ['push', 'gcr.io/abiding-robot-255320/n1scrapper:$SHORT_SHA']
 
 
 #Uses the container and replaces the existing one in Kubernetes

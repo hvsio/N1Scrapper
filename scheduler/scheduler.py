@@ -19,7 +19,7 @@ def update_timout():
 
 
 def send_request_scrap():
-    requests.get('http://127.0.0.1:8001/scrapper')
+    requests.get('http://127.0.0.1:8002/scrapper')
 
 
 def job():

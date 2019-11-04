@@ -1,37 +1,3 @@
-# xpaths = [0.from x currency name, 1. to y currency name,2. xpath to buy row,3. xpath to sell,4. unit]
-
-nordea_url = "https://www.nordea.dk/erhverv/valutamarginaler.html"
-nordea_xpaths = [" ",
-                 "/html/body/main/section[1]/div/article/table/tbody/tr/td[1]/text()",
-                 "/html/body/main/section[1]/div/article/table/tbody/tr/td[4]/text()",
-                 "/html/body/main/section[1]/div/article/table/tbody/tr/td[5]/text()"
-                 ]
-
-
-fynske_url = "https://www.fynskebank.dk/om-os/priser-og-vilkar/valutamarginaler/"
-fynske_xpaths = [" ",
-                 "/html/body/div[1]/div[1]/div/div/div/section/div/div[1]/table[1]/tbody/tr/td[1]/text()",
-                 "/html/body/div[1]/div[1]/div/div/div/section/div/div[1]/table[1]/tbody/tr/td[3]/text()",
-                 "/html/body/div[1]/div[1]/div/div/div/section/div/div[1]/table[1]/tbody/tr/td[4]/text()"
-                 ]
-
-jyske_url = "https://www.jyskebank.dk/produkter/priser/valutamarginaler"
-jyske_xpaths = [" ",
-                '//*[@id="Valutamarginaler"]/tbody/tr/td/font/font/text()',
-                '/html/body/div/div/div/div/div/div/table/tbody/tr/td[1]/font',
-                '//*[@id="Valutamarginaler"]/tbody/tr/td[2]/div/div/font/font/text()',
-                '/html/body/div/div/div/div/div/div/table/tbody/tr/td[2]/div/div/font/font',
-
-                '//*[@id="Valutamarginaler"]/tbody/tr/td[2]/div/div/font/font/text()'
-                ]
-
-nykredit_url = "https://www.nykredit.dk/dit-liv/priser-og-vilkar/valutakurser/valutakurser---noteringskurser/"
-nykredit_xpaths = [" ",
-                   '//*[@id="main-container"]/article/div[3]/div[2]/div/div/div[2]/div/table/tbody/tr/td[3]/text()',
-                   '//*[@id="main-container"]/article/div[3]/div[2]/div/div/div[2]/div/table/tbody/tr/td[8]/text()',
-                   '//*[@id="main-container"]/article/div[3]/div[2]/div/div/div[2]/div/table/tbody/tr/td[8]/text()'
-                   ]
-
 currency_name_iso = {
     'ALL': 'Albania Lek',
     'AFN': 'Afghanistan Afghani',
@@ -73,6 +39,7 @@ currency_name_iso = {
     'FJD': 'Fiji Dollar',
     'GHC': 'Ghana Cedis',
     'GIP': 'Gibraltar Pound',
+    'XAU': 'Gold',
     'GTQ': 'Guatemala Quetzal',
     'GGP': 'Guernsey Pound',
     'GYD': 'Guyana Dollar',
@@ -88,6 +55,7 @@ currency_name_iso = {
     'JMD': 'Jamaica Dollar',
     'JPY': 'Japan Yen',
     'JEP': 'Jersey Pound',
+    'JOD': 'Jordanian Dinar',
     'KZT': 'Kazakhstan Tenge',
     'KES': 'Kenyan Shilling',
     'KPW': 'Korea (North) Won',
@@ -127,6 +95,8 @@ currency_name_iso = {
     'RSD': 'Serbia Dinar',
     'SCR': 'Seychelles Rupee',
     'SGD': 'Singapore Dollar',
+    'SKK': 'Slovak koruna',
+    'SIT': 'Slovenian tolar',
     'SBD': 'Solomon Islands Dollar',
     'SOS': 'Somalia Shilling',
     'ZAR': 'South Africa Rand',

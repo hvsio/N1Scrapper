@@ -1,5 +1,5 @@
 import unittest
-from scrapper.banks_data import country_name_iso
+from scrapper.iso_data import country_name_iso
 from scrapper import validators
 
 

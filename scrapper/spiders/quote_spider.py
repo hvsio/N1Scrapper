@@ -1,6 +1,9 @@
 import scrapy
 import requests
 from datetime import datetime
+
+from scrapy_splash import SplashRequest
+
 import logger
 from scrapper.items import OutputTable, ProductItemLoader
 from environment import environment
@@ -27,7 +30,9 @@ class WebsiteBankSpider(scrapy.Spider):
     def start_requests(self):
         for index in range(len(self.data)):
             print(f"Starting request for {self.data[index]['pageurl']}")
-            yield scrapy.Request(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index])
+            # yield scrapy.Request(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index])
+            yield SplashRequest(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index],
+                                args={'wait': 1.0})
 
     def parse(self, response):
         loader = ProductItemLoader(item=OutputTable(), response=response)
@@ -43,17 +48,12 @@ class WebsiteBankSpider(scrapy.Spider):
         loader.add_xpath('buyMargin', meta['buyxpath'])
         loader.add_xpath('sellMargin', meta['sellxpath'])
 
-        # toCur = response.xpath(meta['toCurrencyXpath']).getall()
-        # buy = response.xpath(meta['buyxpath']).getall()
-        # sell = response.xpath(meta['sellxpath']).getall()
+        toCur = response.xpath(meta['toCurrencyXpath']).getall()
+        buy = response.xpath(meta['buyxpath']).getall()
+        sell = response.xpath(meta['sellxpath']).getall()
 
-        # if meta['name'] == 'HYPO NOE' or meta['name'] == 'Deniz Bank' or meta['name'] == 'Volksbank':
-        #
-        #     with open(f'{meta["name"]}.html', 'wb') as F:
-        #         F.write(response.body)
-        #
+        # if meta['name'] == 'Uni Credit':
         #     print(meta['name'])
-        #     print(response.text)
         #     print(toCur)
         #     print(buy)
         #     print(sell)

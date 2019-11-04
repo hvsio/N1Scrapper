@@ -7,7 +7,7 @@
 import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst, MapCompose
-from scrapper import banks_data
+from scrapper import iso_data
 
 
 class ProductItemLoader(ItemLoader):
@@ -15,35 +15,63 @@ class ProductItemLoader(ItemLoader):
 
 
 class StripText:
-    def __init__(self, chars='% +-\t\n'):
+    def __init__(self, chars='% +\t\n'):
         self.chars = chars
 
-    def __call__(self, value):  # This makes an instance callable
-        try:
-            return value.strip(self.chars)
-        except:
+    def __call__(self, value):
+        value = value.strip(self.chars)
+
+        if value == '-':
+            return '-'
+        else:
+            value = value.strip('-')
             return value
+        #
+        # if any((c in self.chars) for c in value):
+        #     value = value.strip(self.chars)
+        #     if value == '-':
+        #         return '-'
+        #     else:
+        #         value = value.strip('-')
+        #         return value
+        # else:
+        #     return value
 
 
 class ParseCurrencyNameToISO:
     def __call__(self, value):  # This makes an instance callable
-        try:
-            for key in banks_data.currency_name_iso.keys():
-                if key in value:
-                    value = key
-            return value
-        except:
-            return value
+        for key in iso_data.currency_name_iso.keys():
+            if key in value:
+                value = key
+                return value
+        return ''
 
 
 class ParseComaIntoDot:
     def __call__(self, value):  # This makes an instance callable
-        try:
-            if "," in value:
-                value = value.replace(",", ".")
+        index = value.find(',')
+        if index == -1:
             return value
-        except:
-            return value
+        else:
+            value = value.replace(",", ".")
+            value = value.replace(".", "", value.count(".") - 1)
+        return value
+
+
+class PrepareMargin:
+    def __call__(self, value):  # This makes an instance callable
+        if not value == '-':
+            try:
+                value = float(value)
+                return str(value)
+            except ValueError:
+                return ''
+        return value
+
+
+class PrepareCurrency:
+    def __call__(self, value):  # This makes an instance callable
+        return value
 
 
 class OutputTable(scrapy.Item):
@@ -52,14 +80,14 @@ class OutputTable(scrapy.Item):
     time = scrapy.Field()
     unit = scrapy.Field()
     fromCurrency = scrapy.Field(
-        output_processor=MapCompose(StripText())
+        output_processor=MapCompose()
     )
     toCurrency = scrapy.Field(
         output_processor=MapCompose(StripText(), ParseCurrencyNameToISO())
     )
     buyMargin = scrapy.Field(
-        output_processor=MapCompose(StripText(), ParseComaIntoDot())
+        output_processor=MapCompose(StripText(), ParseComaIntoDot(), PrepareMargin())
     )
     sellMargin = scrapy.Field(
-        output_processor=MapCompose(StripText(), ParseComaIntoDot())
+        output_processor=MapCompose(StripText(), ParseComaIntoDot(), PrepareMargin())
     )

@@ -1,14 +1,17 @@
 {
   "cloud":{
     "scrapper_config_service": "http://35.228.177.191:8000",
-    "margin_saver_service": "http://35.228.255.25:5000"
+    "margin_saver_service": "http://35.228.255.25:5000",
+    "splash_container": ""
   },
   "dev": {
     "scrapper_config_service": "http://0.0.0.0:8000",
-    "margin_saver_service": "http://0.0.0.0:5000"
+    "margin_saver_service": "http://0.0.0.0:5000",
+    "splash_container": "http://127.0.0.1:8050"
   },
   "mixed": {
     "scrapper_config_service": "http://35.228.177.191:8000",
-    "margin_saver_service": "http://127.0.0.1:5000"
+    "margin_saver_service": "http://127.0.0.1:5000",
+    "splash_container": "http://127.0.0.1:8050"
   }
 }

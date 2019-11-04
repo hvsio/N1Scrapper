@@ -17,3 +17,13 @@ def margin_saver_service_url():
             data = json.load(environments)
             url = data[runtime_json['run']]['margin_saver_service']
             return url
+
+
+def splash_container_url():
+    with open('environment/runtime.json') as runtime:
+        runtime_json = json.load(runtime)
+        with open('environment/environment.json') as environments:
+            data = json.load(environments)
+            url = data[runtime_json['run']]['splash_container']
+            return url
+

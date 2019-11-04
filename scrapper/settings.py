@@ -8,6 +8,7 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+from environment import environment
 
 BOT_NAME = 'scrapper'
 
@@ -74,8 +75,7 @@ SPIDERMON_SPIDER_CLOSE_MONITORS = (
 
 SPIDERMON_ENABLED = True
 
-# TODO: ENVIRONMENT THINGY
-SPLASH_URL = 'http://localhost:8050'
+SPLASH_URL = environment.splash_container_url()
 
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 

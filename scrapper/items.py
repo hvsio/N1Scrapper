@@ -62,6 +62,10 @@ class OutputTable(scrapy.Item):
     country = scrapy.Field()
     time = scrapy.Field()
     unit = scrapy.Field()
+    isCrossInverted = scrapy.Field()
+    exchangeUnit = scrapy.Field(
+        output_processor=MapCompose()
+    )
     fromCurrency = scrapy.Field(
         output_processor=MapCompose()
     )

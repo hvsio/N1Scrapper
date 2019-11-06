@@ -85,8 +85,9 @@ ITEM_PIPELINES = {
     'scrapper.pipelines.DropEmptyRows': 600,
     'scrapper.pipelines.LevelColumns': 650,
     'scrapper.pipelines.DropRowsWithNoMargin': 700,
-    'scrapper.pipelines.DisplayItem': 750,
-    'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 800,
+    'scrapper.pipelines.CalculateExchangePerOneUnit': 800,
+    'scrapper.pipelines.DisplayItem': 800,
+    'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 850,
     'scrapper.pipelines.SendData': 999,
 }
 

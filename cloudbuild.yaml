@@ -23,9 +23,8 @@ steps:
   args: ['push', 'gcr.io/abiding-robot-255320/n1scrapper:$SHORT_SHA']
 
 
-Uses the container and replaces the existing one in Kubernetes
+#Uses the container and replaces the existing one in Kubernetes
 - name: 'gcr.io/cloud-builders/kubectl'
-
   id: Kubernetes deployment
   args: ['set', 'image', 'deployment/n1scrapper', 'n1scrapper-sha256=gcr.io/abiding-robot-255320/n1scrapper:$SHORT_SHA']
   env:

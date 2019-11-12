@@ -1,3 +1,5 @@
+import re
+
 import scrapy
 import requests
 from datetime import datetime
@@ -32,7 +34,7 @@ class WebsiteBankSpider(scrapy.Spider):
         for index in range(len(self.data)):
             print(f"Starting request for {self.data[index]['pageurl']}")
             yield SplashRequest(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index],
-                                args={'wait': 1.5})
+                                args={'wait': 1.0})
 
     def parse(self, response):
         loader = ProductItemLoader(item=OutputTable(), response=response)
@@ -54,7 +56,7 @@ class WebsiteBankSpider(scrapy.Spider):
         buy = response.xpath(meta['buyxpath']).getall()
         sell = response.xpath(meta['sellxpath']).getall()
 
-        if meta['name'] == 'Danske Bank':
+        if meta['name'] == 'Forex NOR':
             print(meta['name'])
             print(toCur)
             print(buy)

@@ -30,6 +30,7 @@ currency_name_iso = {
     'CUP': 'Cuba Peso',
     'CZK': 'Czech Republic Koruna',
     'DKK': 'Denmark Krone',
+    'DZD': 'Algerian Dinar',
     'DOP': 'Dominican Republic Peso',
     'XCD': 'East Caribbean Dollar',
     'EGP': 'Egypt Pound',
@@ -52,6 +53,7 @@ currency_name_iso = {
     'INR': 'India Rupee',
     'IDR': 'Indonesia Rupiah',
     'IRR': 'Iran Rial',
+    'IQD': 'Iraqi Dinar',
     'IMP': 'Isle of Man Pound',
     'ILS': 'Israel Shekel',
     'JMD': 'Jamaica Dollar',
@@ -125,6 +127,7 @@ currency_name_iso = {
     'VEF': 'Venezuela Bolivar',
     'VND': 'Viet Nam Dong',
     'YER': 'Yemen Rial',
+    'XOF': 'West African CFA franc',
     'ZWD': 'Zimbabwe Dollar'
 }
 

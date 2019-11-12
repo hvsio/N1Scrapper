@@ -10,19 +10,15 @@ class ItemValidationMonitor(Monitor, StatsMonitorMixin):
 
     @monitors.name('No errors found')
     def test_no_item_validation_errors(self):
-
         validation_errors = getattr(
             self.stats, 'spidermon/validation/fields/errors', 0
         )
 
-        try:
-            self.assertEqual(
-                validation_errors,
-                0,
-                msg='Found validation errors in {} fields'.format(validation_errors)
-            )
-        except AssertionError:
-            pass
+        self.assertEqual(
+            validation_errors,
+            0,
+            msg='Found validation errors in {} fields'.format(validation_errors)
+        )
 
 
 class SpiderCloseMonitorSuite(MonitorSuite):

@@ -1,12 +1,3 @@
-2019-11-03 17:44:25,114 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 17:44:25,114 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 17:44:25,115 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 17:44:25,115 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 17:48:28,314 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 17:48:28,314 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 17:48:28,315 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 17:48:28,315 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 18:29:48,322 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 18:29:48,322 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 18:29:48,323 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
-2019-11-03 18:29:48,323 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: 
+2019-11-06 12:47:00,374 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: -
+2019-11-06 12:47:00,559 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: -
+2019-11-06 12:47:00,570 [validators -> is_valid_currency_iso] ERROR: Invalid currency ISO code: -

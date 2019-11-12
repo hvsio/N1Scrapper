@@ -68,21 +68,21 @@ class LevelColumns(object):
         temp_to_currency = []
         temp_buy_margin = []
         temp_sell_margin = []
-
-        if True:
-            print(f'###########LEVEL--BEFORE-------{item["name"]}------------')
-            for i in range(the_longest):
-
-                string = f"{i}.\t{item['fromCurrency']}"
-                if len(item['toCurrency']) > i:
-                    string += f"\t\t{item['toCurrency'][i]}"
-                if len(item['sellMargin']) > i:
-                    string += f"\t\t{item['sellMargin'][i]}"
-                if len(item['buyMargin']) > i:
-                    string += f"\t\t{item['buyMargin'][i]}"
-                if len(item['exchangeUnit']) > i and item['exchangeUnit'] != '':
-                    string += f"\t\t{item['exchangeUnit'][i]}"
-                print(string)
+        #
+        # if True:
+        #     print(f'###########LEVEL--BEFORE-------{item["name"]}------------')
+        #     for i in range(the_longest):
+        #
+        #         string = f"{i}.\t{item['fromCurrency']}"
+        #         if len(item['toCurrency']) > i:
+        #             string += f"\t\t{item['toCurrency'][i]}"
+        #         if len(item['sellMargin']) > i:
+        #             string += f"\t\t{item['sellMargin'][i]}"
+        #         if len(item['buyMargin']) > i:
+        #             string += f"\t\t{item['buyMargin'][i]}"
+        #         if len(item['exchangeUnit']) > i and item['exchangeUnit'] != '':
+        #             string += f"\t\t{item['exchangeUnit'][i]}"
+        #         print(string)
 
         if len(item['toCurrency']) == len(item['sellMargin']) == len(item['buyMargin']):
             for i in range(the_longest):
@@ -101,21 +101,21 @@ class LevelColumns(object):
         item['toCurrency'] = temp_to_currency
         item['sellMargin'] = temp_sell_margin
         item['buyMargin'] = temp_buy_margin
-
-        if True:
-            print(f'###########LEVEL--AFTER-------{item["name"]}------------')
-            for i in range(the_longest):
-
-                string = f"{i}.\t{item['fromCurrency']}"
-                if len(item['toCurrency']) > i:
-                    string += f"\t\t{item['toCurrency'][i]}"
-                if len(item['sellMargin']) > i:
-                    string += f"\t\t{item['sellMargin'][i]}"
-                if len(item['buyMargin']) > i:
-                    string += f"\t\t{item['buyMargin'][i]}"
-                if len(item['exchangeUnit']) > i and item['exchangeUnit'] != '':
-                    string += f"\t\t{item['exchangeUnit'][i]}"
-                print(string)
+        #
+        # if True:
+        #     print(f'###########LEVEL--AFTER-------{item["name"]}------------')
+        #     for i in range(the_longest):
+        #
+        #         string = f"{i}.\t{item['fromCurrency']}"
+        #         if len(item['toCurrency']) > i:
+        #             string += f"\t\t{item['toCurrency'][i]}"
+        #         if len(item['sellMargin']) > i:
+        #             string += f"\t\t{item['sellMargin'][i]}"
+        #         if len(item['buyMargin']) > i:
+        #             string += f"\t\t{item['buyMargin'][i]}"
+        #         if len(item['exchangeUnit']) > i and item['exchangeUnit'] != '':
+        #             string += f"\t\t{item['exchangeUnit'][i]}"
+        #         print(string)
 
         return item
 

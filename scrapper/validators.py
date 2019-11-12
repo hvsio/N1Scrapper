@@ -1,6 +1,6 @@
 import logger
 from schematics.models import Model
-from schematics.types import StringType, ListType
+from schematics.types import StringType, ListType, BooleanType, BaseType
 from schematics.exceptions import ValidationError
 from scrapper.iso_data import country_name_iso, currency_name_iso
 from iso4217 import Currency
@@ -9,7 +9,7 @@ my_logger = logger.get_logger("my_log")
 
 
 def is_valid_unit(value):
-    valid_unit = ["M100", "M1000", "percentage", "exchange"]
+    valid_unit = ["M100", "M1000", "percentage", "exchange", "exchange100"]
 
     if not valid_unit.__contains__(value):
         my_logger.error(f'Invalid unit: {value}')
@@ -18,8 +18,11 @@ def is_valid_unit(value):
 
 
 def is_valid_margin(value):
-    # TODO: IMPLEMENT THAT
-    return value
+    try:
+        value = float(value)
+        return str(value)
+    except ValueError:
+        raise ValidationError(f'Invalid margin: {value}')
 
 
 def is_valid_country_iso(value):
@@ -51,3 +54,5 @@ class ItemValidator(Model):
     unit = StringType(validators=[is_valid_unit])
     buyMargin = ListType(StringType(validators=[is_valid_margin]))
     sellMargin = ListType(StringType(validators=[is_valid_margin]))
+    isCrossInverted = BooleanType()
+    exchangeUnit = BaseType()

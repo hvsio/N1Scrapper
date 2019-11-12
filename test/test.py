@@ -33,6 +33,16 @@ class TestMethods(unittest.TestCase):
         for value in invalid_currency:
             self.assertRaises(validators.ValidationError, validators.is_valid_currency_iso, value)
 
+    def test_is_margin_valid_caseValid(self):
+        valid_units = [156, '167867', 1.7895, '1.0']
+        for value in valid_units:
+            self.assertEqual(validators.is_valid_margin(value), str(float(value)))
+
+    def test_is_unit_margin_caseInValid(self):
+        invalid_units = ["abc", '%', '&^%$']
+        for value in invalid_units:
+            self.assertRaises(validators.ValidationError, validators.is_valid_margin, value)
+
 
 if __name__ == '__main__':
     unittest.main()

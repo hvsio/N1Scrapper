@@ -3,6 +3,7 @@
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
 # also here: https://docs.scrapy.org/en/latest/topics/loaders.html
+import re
 
 import scrapy
 from scrapy.loader import ItemLoader
@@ -50,6 +51,8 @@ class LeaveOnlyValidEntries:
     def __call__(self, value):
         if not value == '-':    # let the entries with '-' pass through the function
             try:
+                non_decimal = re.compile(r'[^\d.,]+')
+                value = non_decimal.sub('', value)
                 value = float(value)
                 return str(value)
             except ValueError:

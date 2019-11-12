@@ -7,3 +7,4 @@ scrapy
 requests
 pytest
 spidermon
+scrapy-splash

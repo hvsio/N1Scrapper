@@ -1,11 +1,7 @@
-import re
-
 import scrapy
 import requests
 from datetime import datetime
-
 from scrapy_splash import SplashRequest
-
 import logger
 from scrapper.items import OutputTable, ProductItemLoader
 from environment import environment
@@ -51,15 +47,5 @@ class WebsiteBankSpider(scrapy.Spider):
         loader.add_xpath('exchangeUnit', meta['exchangeunitxpath']) if meta['exchangeunitxpath'] != '' else loader.add_value('exchangeUnit', '')
         loader.add_xpath('buyMargin', meta['buyxpath'])
         loader.add_xpath('sellMargin', meta['sellxpath'])
-
-        toCur = response.xpath(meta['toCurrencyXpath']).getall()
-        buy = response.xpath(meta['buyxpath']).getall()
-        sell = response.xpath(meta['sellxpath']).getall()
-
-        if meta['name'] == 'Forex NOR':
-            print(meta['name'])
-            print(toCur)
-            print(buy)
-            print(sell)
 
         return loader.load_item()

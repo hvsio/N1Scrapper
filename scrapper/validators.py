@@ -3,7 +3,6 @@ from schematics.models import Model
 from schematics.types import StringType, ListType, BooleanType, BaseType
 from schematics.exceptions import ValidationError
 from scrapper.iso_data import country_name_iso, currency_name_iso
-from iso4217 import Currency
 
 my_logger = logger.get_logger("my_log")
 

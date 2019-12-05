@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+
+""" Module not used for the scrapper - original code from 'scrapy make project command' """
 
 # Define here the models for your spider middleware
 #

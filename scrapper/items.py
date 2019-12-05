@@ -1,10 +1,7 @@
-# -*- coding: utf-8 -*-
-
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/items.html
 # also here: https://docs.scrapy.org/en/latest/topics/loaders.html
 import re
-
 import scrapy
 from scrapy.loader import ItemLoader
 from scrapy.loader.processors import TakeFirst, MapCompose

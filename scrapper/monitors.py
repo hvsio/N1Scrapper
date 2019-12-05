@@ -1,8 +1,9 @@
+"""Technically the only purpose of this module is to show the error logs in the console.
+Initial idea was to use it to send email notifications here, but it was too much struggle.
+Therefore email notifications are sent directly from pipelines.py"""
+
 from spidermon.contrib.monitors.mixins import StatsMonitorMixin
 from spidermon import Monitor, MonitorSuite, monitors
-
-# (...other monitors...)
-import logger
 
 
 @monitors.name('Item validation monitor')
@@ -26,6 +27,3 @@ class SpiderCloseMonitorSuite(MonitorSuite):
         ItemValidationMonitor,
     ]
 
-    # monitors_failed_actions = [
-    #     SendSlackMessageSpiderFinished,
-    # ]

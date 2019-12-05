@@ -73,6 +73,12 @@ SPIDERMON_SPIDER_CLOSE_MONITORS = (
     'scrapper.monitors.SpiderCloseMonitorSuite',
 )
 
+ERROR_EMAIL_PORT = 465
+ERROR_EMAIL_SMTP_SERVER = "smtp.gmail.com"
+ERROR_EMAIL_SENDER = "itcomstudents@gmail.com"
+ERROR_EMAIL_RECEIVER = "szymonso1009@gmail.com"
+ERROR_EMAIL_PASSWORD = "holadontsteal"
+
 SPIDERMON_ENABLED = True
 
 SPLASH_URL = environment.splash_container_url()
@@ -86,8 +92,8 @@ ITEM_PIPELINES = {
     'scrapper.pipelines.LevelColumns': 650,
     'scrapper.pipelines.DropRowsWithNoMargin': 700,
     'scrapper.pipelines.CalculateExchangePerOneUnit': 800,
-    # 'scrapper.pipelines.DisplayItem': 800,
-    'spidermon.contrib.scrapy.pipelines.ItemValidationPipeline': 850,
+    'scrapper.pipelines.DisplayItem': 800,
+    'scrapper.pipelines.ItemValidationPipeline': 850,
     'scrapper.pipelines.SendData': 999,
 }
 

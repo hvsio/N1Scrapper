@@ -79,6 +79,7 @@ ERROR_EMAIL_SENDER = "itcomstudents@gmail.com"
 ERROR_EMAIL_RECEIVER = "szymonso1009@gmail.com"
 ERROR_EMAIL_PASSWORD = "holadontsteal"
 
+SPIDERMON_VALIDATION_DROP_ITEMS_WITH_ERRORS = True
 SPIDERMON_ENABLED = True
 
 SPLASH_URL = environment.splash_container_url()

@@ -6,7 +6,7 @@ from scrapper import validators
 class TestMethods(unittest.TestCase):
 
     def test_is_unit_valid_caseValid(self):
-        valid_units = ["M100", "M1000", "percentage", "exchange"]
+        valid_units = ["M100", "exchange100", "percentage", "exchange"]
         for value in valid_units:
             self.assertEqual(validators.is_valid_unit(value), value)
 

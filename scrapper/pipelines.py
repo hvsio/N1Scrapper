@@ -1,5 +1,4 @@
 from __future__ import absolute_import
-import json
 import six
 import json
 import smtplib, ssl
@@ -16,7 +15,6 @@ from schematics.models import Model
 from spidermon.contrib.scrapy.stats import ValidationStatsManager
 import requests
 from environment import environment
-from scrapper.validators import ItemValidator
 from scrapper.settings import ERROR_EMAIL_PORT, ERROR_EMAIL_SMTP_SERVER, ERROR_EMAIL_SENDER
 from scrapper.settings import ERROR_EMAIL_RECEIVER, ERROR_EMAIL_PASSWORD
 

@@ -16,7 +16,6 @@ class WebsiteBankSpider(scrapy.Spider):
 
         url = environment.scrapper_service_url() + "/banks"
 
-        # download the jsons from the http request
         resp = requests.get(url)
         self.data = resp.json()
 
@@ -29,8 +28,7 @@ class WebsiteBankSpider(scrapy.Spider):
     def start_requests(self):
         for index in range(len(self.data)):
             print(f"Starting request for {self.data[index]['pageurl']}")
-            yield SplashRequest(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index],
-                                args={'wait': 1.0})
+            yield SplashRequest(url=self.data[index]['pageurl'], callback=self.parse, meta=self.data[index], args={'wait': 1.0})
 
     def parse(self, response):
         loader = ProductItemLoader(item=OutputTable(), response=response)

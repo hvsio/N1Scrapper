@@ -8,7 +8,7 @@ my_logger = logger.get_logger("my_log")
 
 
 def is_valid_unit(value):
-    valid_unit = ["M100", "M1000", "percentage", "exchange", "exchange100"]
+    valid_unit = ["M100", "percentage", "exchange", "exchange100"]
 
     if not valid_unit.__contains__(value):
         my_logger.error(f'Invalid unit: {value}')

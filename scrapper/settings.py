@@ -93,7 +93,7 @@ ITEM_PIPELINES = {
     'scrapper.pipelines.LevelColumns': 650,
     'scrapper.pipelines.DropRowsWithNoMargin': 700,
     'scrapper.pipelines.CalculateExchangePerOneUnit': 800,
-    'scrapper.pipelines.DisplayItem': 800,
+    # 'scrapper.pipelines.DisplayItem': 800,
     'scrapper.pipelines.ItemValidationPipeline': 850,
     'scrapper.pipelines.SendData': 999,
 }

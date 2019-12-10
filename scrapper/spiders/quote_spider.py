@@ -1,3 +1,6 @@
+import smtplib
+import ssl
+
 import scrapy
 import requests
 from datetime import datetime
@@ -5,6 +8,8 @@ from scrapy_splash import SplashRequest
 import logger
 from scrapper.items import OutputTable, ProductItemLoader
 from environment import environment
+from scrapper.settings import ERROR_EMAIL_SMTP_SERVER, ERROR_EMAIL_PORT, ERROR_EMAIL_SENDER, ERROR_EMAIL_PASSWORD, \
+    ERROR_EMAIL_RECEIVER
 
 
 class WebsiteBankSpider(scrapy.Spider):
@@ -35,6 +40,10 @@ class WebsiteBankSpider(scrapy.Spider):
         timestamp = datetime.now()
         meta = response.meta
 
+        # checks if xpaths to the elements of a table can be found.
+        if response.xpath(meta['toCurrencyXpath']).getall() == [] or response.xpath(meta['buyxpath']).getall() == [] or response.xpath(meta['sellxpath']).getall() == []:
+            self.send_email(response.meta)
+
         loader.add_value('name', meta['name'])
         loader.add_value('country', meta['country'])
         loader.add_value('time', timestamp.strftime("%d-%b-%Y (%H:%M:%S.%f)"))
@@ -47,3 +56,17 @@ class WebsiteBankSpider(scrapy.Spider):
         loader.add_xpath('sellMargin', meta['sellxpath'])
 
         return loader.load_item()
+
+    # TODO: make general method/class to send alerts (similar method in "pipelines.py")
+    def send_email(self, meta):
+        message = f"""\
+            Subject: Scraper error logs
+
+        Bank: {meta['name']} \n
+        Errors: Cannot find xpaths to the elements of a table. 
+        Please check the URL and make sure it works!
+        """
+        context = ssl.create_default_context()
+        with smtplib.SMTP_SSL(ERROR_EMAIL_SMTP_SERVER, ERROR_EMAIL_PORT, context=context) as server:
+            server.login(ERROR_EMAIL_SENDER, ERROR_EMAIL_PASSWORD)
+            server.sendmail(ERROR_EMAIL_SENDER, ERROR_EMAIL_RECEIVER, message)

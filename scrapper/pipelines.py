@@ -269,6 +269,7 @@ class ItemValidationPipeline(object):
                     self._drop_item(item, errors)
         return item
 
+    # TODO: make general method/class to send alerts (similar method in "quote_spider.py")
     def send_mail(self, item, errors):
 
         message = f"""\
